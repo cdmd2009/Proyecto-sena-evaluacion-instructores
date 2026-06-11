@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Contacto
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/styles_contact.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container contacto-container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="contacto-card">
+
+                <h1 class="titulo-contacto text-center">
+
+                    Contáctanos
+
+                </h1>
+
+                <p class="subtitulo-contacto text-center">
+
+                    Sistema de Evaluación de Instructores SENA
+
+                </p>
+
+                <form>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Nombre completo
+                        </label>
+
+                        <input type="text"
+                            class="form-control"
+                            placeholder="Ingrese su nombre">
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email"
+                            class="form-control"
+                            placeholder="Ingrese su correo">
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Asunto
+                        </label>
+
+                        <input type="text"
+                            class="form-control"
+                            placeholder="Ingrese el asunto">
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            rows="5"
+                            placeholder="Escriba su mensaje">
+                        </textarea>
+
+                    </div>
+
+                    <button type="button"
+                        class="btn btn-enviar w-100"
+                        onclick="mensaje()">
+
+                        Enviar Mensaje
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+    function mensaje(){
+
+        alert("Mensaje enviado correctamente");
+
+    }
+
+</script>
+
+{% endblock %}

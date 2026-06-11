@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Eliminar Instructor
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/styles_eliminar_instructor.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid pagina-formulario">
+
+    <div class="encabezado">
+
+        <div>
+
+            <h1 class="titulo-rojo">
+                Eliminar Instructor
+            </h1>
+
+            <p class="subtitulo">
+                Elimina permanentemente un instructor del sistema
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('instructores') }}"
+           class="btn btn-outline-secondary">
+
+            <i class="bi bi-arrow-left"></i>
+            Volver
+
+        </a>
+
+    </div>
+
+    <div class="card formulario-card">
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Seleccione Instructor
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>
+                            Carlos Rodríguez
+                        </option>
+
+                        <option>
+                            Ana Torres
+                        </option>
+
+                        <option>
+                            Laura Gómez
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="alert alert-warning">
+
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+
+                    Esta acción eliminará permanentemente el instructor seleccionado.
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-danger btn-eliminar">
+
+                    <i class="bi bi-trash"></i>
+
+                    Eliminar Instructor
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

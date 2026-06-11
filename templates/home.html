@@ -1,0 +1,115 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block styles %}
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/styles_home.css') }}"
+>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <!-- HERO -->
+
+    <section class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+
+                Sistema de Evaluación
+                de Instructores
+
+            </h1>
+
+            <p class="subtitle">
+
+                Plataforma académica desarrollada para optimizar
+                y centralizar el proceso de evaluación de
+                instructores del SENA.
+
+            </p>
+
+            <a
+                href="{{ url_for('login') }}"
+                class="btn btn-home"
+            >
+
+                Iniciar Sesión
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- INFORMACION -->
+
+    <section class="info-section container">
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <h2>
+
+                        Bienvenido/a
+
+                    </h2>
+
+                    <p>
+
+                        Bienvenido al sistema institucional de evaluación
+                        de instructores del SENA. Esta plataforma permite
+                        gestionar evaluaciones académicas de forma organizada,
+                        segura y eficiente mediante acceso por roles.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <h2>
+
+                        Descripción del Sistema
+
+                    </h2>
+
+                    <p>
+
+                        El sistema permite que los aprendices evalúen
+                        únicamente a los instructores correspondientes
+                        a su ficha de formación, garantizando
+                        confiabilidad en los resultados, control
+                        de acceso y administración académica centralizada.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}

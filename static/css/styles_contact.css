@@ -1,0 +1,69 @@
+.contacto-container{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.contacto-card{
+
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+
+}
+
+.titulo-contacto{
+
+    color: #39A900;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.subtitulo-contacto{
+
+    color: gray;
+    margin-bottom: 30px;
+
+}
+
+.form-label{
+
+    font-weight: 600;
+    color: #212529;
+
+}
+
+.form-control{
+
+    border-radius: 10px;
+    padding: 12px;
+
+}
+
+.form-control:focus{
+
+    border-color: #39A900;
+    box-shadow: 0px 0px 5px rgba(57,169,0,0.5);
+
+}
+
+.btn-enviar{
+
+    background-color: #39A900;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.btn-enviar:hover{
+
+    background-color: #007832;
+    color: white;
+
+}

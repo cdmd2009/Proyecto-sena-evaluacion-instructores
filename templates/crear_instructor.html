@@ -1,0 +1,153 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Crear Instructor
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/styles_crear_instructor.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid pagina-formulario">
+
+    <div class="encabezado">
+
+        <div>
+
+            <h1 class="titulo">
+                Crear Instructor
+            </h1>
+
+            <p class="subtitulo">
+                Registra un nuevo instructor en el sistema
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('instructores') }}"
+           class="btn btn-outline-success">
+
+            <i class="bi bi-arrow-left"></i>
+            Volver
+
+        </a>
+
+    </div>
+
+    <div class="card formulario-card">
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Nombre del Instructor
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Ingrese el nombre">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Correo Institucional
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            placeholder="correo@sena.edu.co">
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Competencia
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Ingrese competencia">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Día de Formación
+                        </label>
+
+                        <select class="form-select">
+
+                            <option selected disabled>
+                                Seleccione un día
+                            </option>
+
+                            <option>Lunes</option>
+                            <option>Martes</option>
+                            <option>Miércoles</option>
+                            <option>Jueves</option>
+                            <option>Viernes</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Foto del Instructor
+                    </label>
+
+                    <input
+                        type="file"
+                        class="form-control">
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-success btn-guardar">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Guardar Instructor
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

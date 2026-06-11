@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Actualizar Instructor
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/styles_actualizar_instructor.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid pagina-formulario">
+
+    <div class="encabezado">
+
+        <div>
+
+            <h1 class="titulo">
+                Actualizar Instructor
+            </h1>
+
+            <p class="subtitulo">
+                Modifica la información del instructor seleccionado
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('instructores') }}"
+           class="btn btn-outline-success">
+
+            <i class="bi bi-arrow-left"></i>
+            Volver
+
+        </a>
+
+    </div>
+
+    <div class="card formulario-card">
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Nombre del Instructor
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            value="Carlos Rodríguez">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Correo Institucional
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            value="carlos@sena.edu.co">
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Competencia
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            value="Python">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Día de Formación
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Lunes</option>
+                            <option>Martes</option>
+                            <option selected>Miércoles</option>
+                            <option>Jueves</option>
+                            <option>Viernes</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Foto del Instructor
+                    </label>
+
+                    <input
+                        type="file"
+                        class="form-control">
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-success btn-guardar">
+
+                    <i class="bi bi-pencil-square"></i>
+
+                    Actualizar Instructor
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

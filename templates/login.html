@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles_login.css') }}">
+
+<style>
+  
+  /* Reajusta el contenedor principal para que ocupe todo el ancho */
+  .main-area {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .page-content {
+    padding: 0 !important;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="contenedor-login">
+
+    <div class="tarjeta-login">
+
+        <div class="lado-imagen">
+
+            <img
+                src="{{ url_for('static', filename='imgs/img_logo.png') }}"
+                alt="Logo SENA"
+                class="logo-sena">
+
+            <h2>Bienvenido/a</h2>
+
+            <p>Plataforma de acceso</p>
+
+        </div>
+
+        <div class="lado-formulario">
+
+            <h1>Login</h1>
+            <p class="subtitulo">Ingresa tus credenciales para continuar</p>
+
+            <form>
+
+                <div>
+                    <label>Correo</label>
+                    <input
+                        type="email"
+                        placeholder="Ingrese su correo"
+                        required>
+                </div>
+
+                <div>
+                    <label>Contraseña</label>
+                    <input
+                        type="password"
+                        placeholder="Ingrese su contraseña"
+                        required>
+                </div>
+
+                <button
+                    type="button"
+                    onclick="bienvenida()">
+                    Ingresar
+                </button>
+
+            </form>
+
+            <div class="recuperar">
+                <a href="#" style="color: #39A900; text-decoration: none;">¿Olvidaste tu contraseña?</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function bienvenida() {
+    alert("Bienvenido usuario");
+}
+</script>
+{% endblock %}

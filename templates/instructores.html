@@ -1,0 +1,500 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Instructores
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/styles_instructores.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid pagina-instructores">
+
+    <div class="encabezado">
+
+        <div>
+
+            <h1 class="titulo">
+                Gestión de Instructores
+            </h1>
+
+            <p class="subtitulo">
+                Administra, consulta y actualiza los instructores registrados
+            </p>
+
+        </div>
+
+        <div>
+
+            <a
+                href="{{ url_for('crear_instructor') }}"
+                class="btn btn-success btn-nuevo"
+            >
+
+                <i class="bi bi-plus-circle"></i>
+
+                Nuevo Instructor
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="barra-superior">
+
+        <div class="input-group buscador">
+
+            <span class="input-group-text">
+
+                <i class="bi bi-search"></i>
+
+            </span>
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar instructor..."
+            >
+
+        </div>
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <div class="col">
+
+            <div class="card instructor-card">
+
+                <div class="card-body">
+
+                    <div class="perfil">
+
+                        <img
+                            src="{{ url_for('static', filename='imgs/instructor1.png') }}"
+                            alt="Instructor"
+                            class="foto"
+                        >
+
+                        <div>
+
+                            <h4>
+                                Carlos Rodríguez
+                            </h4>
+
+                            <span class="badge bg-success">
+                                Python
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <p>
+
+                        <i class="bi bi-book"></i>
+
+                        Competencia:
+                        Python
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-calendar3"></i>
+
+                        Día:
+                        Miércoles
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-mortarboard"></i>
+
+                        Ficha:
+                        2845110
+
+                    </p>
+
+                    <div class="acciones">
+
+                        <a href="#"
+   class="btn btn-light"
+   data-bs-toggle="modal"
+   data-bs-target="#modalCarlos">
+
+    <i class="bi bi-eye"></i>
+
+</a>
+
+                        <a
+                            href="{{ url_for('actualizar_instructor') }}"
+                            class="btn btn-success"
+                        >
+
+                            <i class="bi bi-pencil"></i>
+
+                        </a>
+
+                        <a
+                            href="{{ url_for('eliminar_instructor') }}"
+                            class="btn btn-danger"
+                        >
+
+                            <i class="bi bi-trash"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+
+            <div class="card instructor-card">
+
+                <div class="card-body">
+
+                    <div class="perfil">
+
+                        <img
+                            src="{{ url_for('static', filename='imgs/instructor2.png') }}"
+                            alt="Instructor"
+                            class="foto"
+                        >
+
+                        <div>
+
+                            <h4>
+                                Ana Torres
+                            </h4>
+
+                            <span class="badge bg-success">
+                                Base de Datos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <p>
+
+                        <i class="bi bi-book"></i>
+
+                        Competencia:
+                        Base de Datos
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-calendar3"></i>
+
+                        Día:
+                        Lunes
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-mortarboard"></i>
+
+                        Ficha:
+                        2845110
+
+                    </p>
+
+                    <div class="acciones">
+
+                        <a href="#"
+   class="btn btn-light"
+   data-bs-toggle="modal"
+   data-bs-target="#modalAna">
+
+    <i class="bi bi-eye"></i>
+
+</a>
+
+                        <a
+                            href="{{ url_for('actualizar_instructor') }}"
+                            class="btn btn-success"
+                        >
+
+                            <i class="bi bi-pencil"></i>
+
+                        </a>
+
+                        <a
+                            href="{{ url_for('eliminar_instructor') }}"
+                            class="btn btn-danger"
+                        >
+
+                            <i class="bi bi-trash"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+
+            <div class="card instructor-card">
+
+                <div class="card-body">
+
+                    <div class="perfil">
+
+                        <img
+                            src="{{ url_for('static', filename='imgs/instructor3.png') }}"
+                            alt="Instructor"
+                            class="foto"
+                        >
+
+                        <div>
+
+                            <h4>
+                                Laura Gómez
+                            </h4>
+
+                            <span class="badge bg-success">
+                                HTML y CSS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <p>
+
+                        <i class="bi bi-book"></i>
+
+                        Competencia:
+                        HTML y CSS
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-calendar3"></i>
+
+                        Día:
+                        Viernes
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-mortarboard"></i>
+
+                        Ficha:
+                        2845111
+
+                    </p>
+
+                    <div class="acciones">
+
+                        <a href="#"
+   class="btn btn-light"
+   data-bs-toggle="modal"
+   data-bs-target="#modalLaura">
+
+    <i class="bi bi-eye"></i>
+
+</a>
+
+                        <a
+                            href="{{ url_for('actualizar_instructor') }}"
+                            class="btn btn-success"
+                        >
+
+                            <i class="bi bi-pencil"></i>
+
+                        </a>
+
+                        <a
+                            href="{{ url_for('eliminar_instructor') }}"
+                            class="btn btn-danger"
+                        >
+
+                            <i class="bi bi-trash"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="modal fade" id="modalCarlos" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Información del Instructor
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body text-center">
+
+                <img src="{{ url_for('static', filename='imgs/instructor1.png') }}"
+                     class="foto-modal">
+
+                <h3>Carlos Rodríguez</h3>
+
+                <span class="badge bg-success">
+                    Python
+                </span>
+
+                <hr>
+
+                <p><strong>Competencia:</strong> Python</p>
+
+                <p><strong>Día:</strong> Miércoles</p>
+
+                <p><strong>Ficha:</strong> 2845110</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="modalAna" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Información del Instructor
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body text-center">
+
+                <img src="{{ url_for('static', filename='imgs/instructor2.png') }}"
+                     class="foto-modal">
+
+                <h3>Ana Torres</h3>
+
+                <span class="badge bg-success">
+                    Base de Datos
+                </span>
+
+                <hr>
+
+                <p><strong>Competencia:</strong> Base de Datos</p>
+
+                <p><strong>Día:</strong> Lunes</p>
+
+                <p><strong>Ficha:</strong> 2845110</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="modalLaura" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Información del Instructor
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body text-center">
+
+                <img src="{{ url_for('static', filename='imgs/instructor3.png') }}"
+                     class="foto-modal">
+
+                <h3>Laura Gómez</h3>
+
+                <span class="badge bg-success">
+                    HTML y CSS
+                </span>
+
+                <hr>
+
+                <p><strong>Competencia:</strong> HTML y CSS</p>
+
+                <p><strong>Día:</strong> Viernes</p>
+
+                <p><strong>Ficha:</strong> 2845111</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
